@@ -1,0 +1,31 @@
+<div class="container mt-3" 
+>
+    <h2>Beauty-Related-Blog</h2>
+    <img src="beauty1.jpg">
+    <div class="mt-4 p-5 bg-primary text-white rounded">
+      <h1>ABOUT BEAUTY</h1> 
+      <p>“Beauty is always about confidence and feeling comfortable in your own skin. A ‘beautiful’ girl or guy in her or his 20s who is insecure about every little detail starts to become less desirable than a person of average beauty who has that confidence beaming from within.” —Diane Aiello</p> 
+    </div>
+  </div>
+<br/>
+<div class="container">
+    
+<div class="row">    
+
+
+  <div class="card" style="width: 15rem;" *ngFor="let post of posts">
+    <img class="card-img-top" src="data:image/png;base64,{{post.postImage}}" alt="Card image cap">
+    <div class="card-body">
+      <h6 class="card-title">{{post.postTitle}}</h6>
+     <p>{{post.postContent | slice : 0 :40 }}...</p>
+      <a href="/post/{{post.postId}}" class="btn btn-primary">Read More</a>
+    </div>
+    
+  </div>
+
+  
+  
+ 
+</div>
+</div>
+<br/>
